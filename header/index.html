@@ -13,6 +13,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script defer src="./js/script.js"></script>
   </head>
   <body>
@@ -20,10 +26,24 @@
       <div class="title">
         <h1 class="logo">CHANEL</h1>
         <div class="icons">
-          <span><i class="fa-solid fa-magnifying-glass"></i></span>
-          <span><i class="fa-regular fa-user"></i></span>
-          <span><i class="fa-regular fa-star"></i></span>
-          <span><i class="fa-solid fa-cart-shopping"></i></span>
+          <div id="my-form" class="invisible">
+            <form action="#">
+              <input type="text" placeholder="원하는 상품을 검색하세요" />
+              <input type="submit" value="search" />
+            </form>
+          </div>
+          <span id="search" title="검색"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span id="my-page" title="나의 페이지"
+            ><i class="fa-regular fa-user"></i
+          ></span>
+          <span id="wish" title="위시리스트"
+            ><i class="fa-regular fa-star"></i
+          ></span>
+          <span id="shopcart" title="장바구니"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></span>
         </div>
       </div>
       <div class="nav">

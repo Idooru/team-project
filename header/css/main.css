@@ -3,13 +3,16 @@
   padding: 0;
 }
 
+.invisible {
+  display: none;
+}
+
 .header {
   top: 0;
   border-top: 8px solid black;
   height: 130px;
-  /* box-shadow: 4px 4px 6px rgb(100, 100, 100); */
   position: sticky;
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(255, 255, 255);
 }
 
 .header .title {
@@ -29,6 +32,31 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.header .title .icons #my-form {
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 25px;
+}
+
+.header .title .icons form {
+  display: flex;
+}
+
+.header .title .icons form input {
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+}
+
+.header .title .icons form input:first-child {
+  border-radius: 25px 25px;
+  color: rgb(88, 88, 88);
+}
+
+.header .title .icons form input:last-child {
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
 }
 
 .header .title .icons {
