@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <form
+      action="doJoin"
+      method="POST"
+      class="joinForm"
+      onsubmit="DoJoinForm__submit(this); return false;"
+    >
+      <h2>회원가입</h2>
+      <div class="textForm">
+        <input name="loginId" type="text" class="id" placeholder="아이디" />
+      </div>
+      <div class="textForm">
+        <input
+          name="loginPw"
+          type="password"
+          class="pw"
+          placeholder="비밀번호"
+        />
+      </div>
+      <div class="textForm">
+        <input
+          name="loginPwConfirm"
+          type="password"
+          class="pw"
+          placeholder="비밀번호 확인"
+        />
+      </div>
+      <div class="textForm">
+        <input name="name" type="password" class="name" placeholder="이름" />
+      </div>
+      <div class="textForm">
+        <input name="email" type="text" class="email" placeholder="이메일" />
+      </div>
+      <div class="textForm">
+        <input
+          name="nickname"
+          type="text"
+          class="nickname"
+          placeholder="닉네임"
+        />
+      </div>
+      <div class="textForm">
+        <input
+          name="cellphoneNo"
+          type="number"
+          class="cellphoneNo"
+          placeholder="전화번호"
+        />
+      </div>
+      <input type="submit" class="btn" value="J O I N" />
+    </form>
+    <!-- <div class="register__form">
+      <div class="title"><h1>회원 가입</h1></div>
+      <div class="input__form">
+        <input id="id" name="loginId" type="text" placeholder="아이디" />
+        <input id="pw" name="loginPw" type="password" placeholder="비밀번호" />
+        <input
+          id="pw"
+          name="loginPwConfirm"
+          type="password"
+          placeholder="비밀번호 확인"
+        />
+        <input id="name" name="name" type="text" placeholder="이름" />
+        <input id="email" name="email" type="email" placeholder="이메일" />
+        <input id="nickname" name="nickname" type="text" placeholder="닉네임" />
+        <input
+          id="cellphoneNo"
+          name="cellphoneNo"
+          type="number"
+          placeholder="전화번호"
+        />
+        <input id="btn" type="submit" value="JOIN" />
+      </div>
+    </div> -->
+  </body>
+</html>
