@@ -9,7 +9,6 @@
 
 .customer__section {
   max-width: 450px;
-  /* border: 1px solid black; */
   margin: 60px auto;
   height: 750px;
 }
@@ -52,4 +51,3 @@
   color: rgb(66, 66, 66);
   padding: 20px;
 }
-
