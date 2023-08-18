@@ -52,6 +52,7 @@
   margin-top: 20px;
   display: block;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .customer__textbox .customer__text form #submit__button {
@@ -65,6 +66,7 @@
   color: white;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 .customer__textbox .customer__text form #submit__button:hover::after {

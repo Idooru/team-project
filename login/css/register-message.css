@@ -68,6 +68,7 @@
   color: white;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 .customer__textbox
