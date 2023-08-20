@@ -1,32 +1,21 @@
 const formEle = $("form").children().toArray();
 
 formEle.forEach((element) => {
-  // const labelEle = $(element).children("label");
   const $inputEle = $(element).children("input");
+  const $lineEle = $inputEle.closest(".text__form").find("label .line");
+  const $lineEleStyle = { visibility: $lineEle.css("visibility") };
 
   $inputEle.on("focus", function () {
-    const $lineEle = $inputEle.closest(".text__form").find("label .line");
+    $lineEleStyle.visibility = "visible";
 
-    let visibility = $lineEle.css("visibility");
-
-    visibility = "visible";
-
-    $lineEle.css({ visibility });
+    $lineEle.css({ ...$lineEleStyle });
   });
 
   $inputEle.on("blur", function () {
-    const $lineEle = $inputEle.closest(".text__form").find("label .line");
+    $lineEleStyle.visibility = "hidden";
 
-    let visibility = $lineEle.css("visibility");
-
-    visibility = "hidden";
-
-    $lineEle.css({ visibility });
+    $lineEle.css({ ...$lineEleStyle });
   });
-
-  if (element.localName === "button") {
-    return;
-  }
 });
 
 $("#user__id").focus();
