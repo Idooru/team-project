@@ -4,7 +4,7 @@
 }
 
 .invisible {
-  display: none;
+  visibility: hidden;
 }
 
 .header {
