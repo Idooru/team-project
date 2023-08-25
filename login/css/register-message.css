@@ -57,7 +57,7 @@
   border-bottom: 2px solid black;
 }
 
-.customer__textbox .customer__text .register__message form #submit__button {
+.customer__textbox .customer__text .register__message form #submit__register {
   display: block;
   width: 408px;
   margin: 0 auto;
@@ -75,7 +75,7 @@
   .customer__text
   .register__message
   form
-  #submit__button:hover::after {
+  #submit__register:hover::after {
   content: "";
   width: 80px;
   height: 1px;

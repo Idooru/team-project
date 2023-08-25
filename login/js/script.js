@@ -28,3 +28,17 @@ $("#register__btn").on("click", function () {
     loginMessageEle.addClass("invisible");
   }
 });
+
+$("#submit__login").on("click", function () {
+  const id = $("#input__email").val();
+  const password = $("#input__password").val();
+
+  if (id && password) {
+    sessionStorage.setItem("id", id);
+    sessionStorage.setItem("password", password);
+
+    location.href = "../../index.html";
+  } else {
+    alert("아이디와 비밀번호를 입력해주세요.");
+  }
+});

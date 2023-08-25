@@ -19,6 +19,12 @@
   align-items: center;
 }
 
+.customer__textbox .customer__text form .input__window .log {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
 .customer__textbox .customer__text form .input__window input {
   font-size: 15px;
   width: 400px;
@@ -55,7 +61,7 @@
   cursor: pointer;
 }
 
-.customer__textbox .customer__text form #submit__button {
+.customer__textbox .customer__text form #submit__login {
   display: block;
   width: 408px;
   margin: 0 auto;
@@ -69,7 +75,7 @@
   cursor: pointer;
 }
 
-.customer__textbox .customer__text form #submit__button:hover::after {
+.customer__textbox .customer__text form #submit__login:hover::after {
   content: "";
   width: 40px;
   height: 1px;

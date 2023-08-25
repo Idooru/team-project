@@ -6,17 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>등록하기 | CHANEL 샤넬</title>
-    <link rel="stylesheet" href="./css/register-message.css" />
-    <link rel="stylesheet" href="./css/login-message.css" />
+    <link rel="stylesheet" href="./login/css/main.css" />
+    <link rel="stylesheet" href="./login/css/login-message.css" />
+    <link rel="stylesheet" href="./login/css/register-message.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
       integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script defer src="./js/script.js"></script>
+    <script defer src="./login/js/script.js"></script>
   </head>
+
   <body>
+    <div class="header"></div>
     <div class="customer__section">
       <h1>마이 페이지</h1>
       <div class="customer__content">
@@ -40,8 +52,9 @@
                 id="input__window"
                 name="phoneNumber"
                 placeholder="휴대폰 번호"
+                autocomplete="off"
               />
-              <button id="submit__button" type="submit">인증코드 전송</button>
+              <button id="submit__register" type="submit">인증코드 전송</button>
             </form>
           </div>
           <div class="login__message invisible">
@@ -53,21 +66,28 @@
               <div class="input__window">
                 <input
                   id="input__email"
-                  type="email"
+                  type="text"
                   placeholder="이메일/휴대폰번호"
+                  autocomplete="off"
                 />
                 <input
                   id="input__password"
                   type="password"
                   placeholder="비밀번호"
+                  autocomplete="off"
                 />
-                <a>비밀번호를 잊으셨나요?</a>
+                <div class="log">
+                  <a>비밀번호를 잊으셨나요?</a>
+                  <a href="./register.html">회원가입</a>
+                </div>
               </div>
-              <button id="submit__button" type="submit">로그인</button>
+              <button id="submit__login" type="button">로그인</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer"></div>
+    <script src="./js/common.js"></script>
   </body>
 </html>

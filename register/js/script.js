@@ -1,27 +1,67 @@
 const formEle = $("form").children().toArray();
 
-const settingStyle = (style, ele, eleStyle) => {
-  eleStyle.visibility = style;
-  ele.css({ ...eleStyle });
+const styler = {
+  settingBorderBottom(style, ele, eleStyle) {
+    eleStyle.borderBottom = style;
+    ele.css({ ...eleStyle });
+  },
+
+  settingLabel(style, ele, eleStyle) {
+    eleStyle.color = style;
+    ele.css({ ...eleStyle });
+  },
 };
 
 formEle.forEach((element) => {
   const $inputEle = $(element).children("input");
-  const $lineEle = $inputEle.closest(".text__form").find("label .line");
-  const $messageEle = $inputEle.closest(".text__form").find("label .message");
-  const $lineEleStyle = { visibility: $lineEle.css("visibility") };
+  const $inputEleStyle = { borderBottom: $inputEle.css("borderBottom") };
 
-  $inputEle.focus(() => settingStyle("visible", $lineEle, $lineEleStyle));
-  $inputEle.blur(() => settingStyle("hidden", $lineEle, $lineEleStyle));
+  const $lableEle = $(element).children("label");
+  const $lableEleStyle = { color: $lableEle.css("color") };
 
-  $inputEle.on("keyup", function () {
-    const placeholderAttr = $(this).attr("placeholder");
-    $messageEle.text(placeholderAttr);
+  $inputEle.focus(() => {
+    styler.settingBorderBottom(
+      "1px solid rgb(0, 0, 0)",
+      $inputEle,
+      $inputEleStyle
+    );
 
-    if ($(this).val().length === 0) {
-      $messageEle.text("");
-    }
+    styler.settingLabel("rgb(0, 0, 0)", $lableEle, $lableEleStyle);
+  });
+
+  $inputEle.blur(() => {
+    styler.settingBorderBottom(
+      "1px solid rgb(214, 214, 214)",
+      $inputEle,
+      $inputEleStyle
+    );
+
+    styler.settingLabel("rgb(95, 95, 95)", $lableEle, $lableEleStyle);
   });
 });
 
 $("#user__id").focus();
+
+$("#submit__button").on("click", function () {
+  const $inputEle = $(".customer__content form input");
+  const isNullInputed = $inputEle
+    .toArray()
+    .map((_, i) => $inputEle.eq(i).val())
+    .filter((info) => info == false);
+
+  if (isNullInputed.length) {
+    alert("입력되지 않은 값이 존재합니다.");
+  }
+
+  const [
+    id,
+    password,
+    passwordRe,
+    gender,
+    firstName,
+    lastName,
+    tell,
+    nickName,
+    email,
+  ] = formInfos;
+});

@@ -4,58 +4,60 @@
 }
 
 .customer__section {
-  max-width: 450px;
+  max-width: 650px;
   margin: 60px auto;
-  height: 750px;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .customer__section h1 {
   text-align: center;
-  font-size: 40px;
-  margin-bottom: 100px;
+  font-size: 30px;
+  margin-top: -10px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.customer__section form .text__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60px;
 }
 
 .customer__section form .text__form label {
-  display: block;
-  font-weight: bold;
-  color: rgb(104, 104, 104);
+  color: rgb(95, 95, 95);
+  width: 130px;
+  font-size: 15px;
+  margin-right: 35px;
+  text-align: right;
+  font-weight: 500;
 }
 
 .customer__section form .text__form .message {
-  display: inline-block;
-  width: 70%;
   text-align: right;
   font-size: 12px;
   font-weight: normal;
-  color: cadetblue;
+  color: rgb(119, 162, 163);
 }
 
 .customer__section form .text__form .line {
   visibility: hidden;
   border-top: 4px solid black;
-  width: 32%;
   height: 0;
   margin-top: 5px;
 }
 
 .customer__section form .text__form input {
-  display: block;
-  width: 390px;
-  margin-top: 11px;
-  padding: 10px 0;
-  padding-left: 40px;
-  padding-right: 20px;
-  margin-bottom: 40px;
+  width: 260px;
+  padding: 10px 10px;
   border: none;
   outline: none;
-  border: 1px solid rgb(214, 214, 214);
+  border-bottom: 1px solid rgb(214, 214, 214);
   color: rgb(102, 102, 102);
-  border-radius: 5px;
 }
 
 .customer__section form .text__form input::placeholder {
-  color: cadetblue;
+  color: rgb(130, 163, 163);
 }
 
 .customer__section form #user__gender {
@@ -73,7 +75,7 @@
 
 .customer__section form #submit__button {
   display: block;
-  width: 408px;
+  width: 350px;
   margin: 0 auto;
   margin-top: 40px;
   height: 50px;
@@ -81,11 +83,11 @@
   border: none;
   color: white;
   font-weight: bold;
-  position: relative;
+  /*   position: relative; */
   cursor: pointer;
 }
 
-.customer__section form #submit__button:hover::after {
+/* .customer__section form #submit__button:hover::after {
   content: "";
   width: 80px;
   height: 1px;
@@ -95,3 +97,4 @@
   left: 50%;
   transform: translate(-50%);
 }
+ */
