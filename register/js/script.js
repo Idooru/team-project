@@ -44,13 +44,15 @@ $("#user__id").focus();
 
 $("#submit__button").on("click", function () {
   const $inputEle = $(".customer__content form input");
-  const isNullInputed = $inputEle
+  const formInfos = $inputEle
     .toArray()
-    .map((_, i) => $inputEle.eq(i).val())
-    .filter((info) => info == false);
+    .map((item) => ({ itemTag: item, itemValue: item.value }));
+  const isNullInputed = formInfos.filter((info) => info.itemValue == false);
 
   if (isNullInputed.length) {
-    alert("입력되지 않은 값이 존재합니다.");
+    // alert("asdsadssaddsadsdsasa");
+    // debugger;
+    console.log(JSON.stringify(isNullInputed[0].itemTag.html()));
   }
 
   const [
@@ -64,4 +66,14 @@ $("#submit__button").on("click", function () {
     nickName,
     email,
   ] = formInfos;
+
+  // if (isNullInputed.length) {
+  //   alert("입력되지 않은 값이 존재합니다.");
+  //   const a = $inputEle.toArray().map((item) => item.value);
+  //   // .filter((item, i) => ({ [i]: !(formInfos[i] && item) }));
+
+  //   debugger;
+
+  //   console.log(a);
+  // }
 });
