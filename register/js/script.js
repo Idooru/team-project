@@ -47,12 +47,23 @@ $("#submit__button").on("click", function () {
   const formInfos = $inputEle
     .toArray()
     .map((item) => ({ itemTag: item, itemValue: item.value }));
-  const isNullInputed = formInfos.filter((info) => info.itemValue == false);
 
-  if (isNullInputed.length) {
-    // alert("asdsadssaddsadsdsasa");
-    // debugger;
-    console.log(JSON.stringify(isNullInputed[0].itemTag.html()));
+  const nullValue = formInfos.filter((info) => info.itemValue == false);
+
+  if (nullValue.length) {
+    alert("입력되지 않은 필드가 있습니다!");
+    nullValue
+      .map((value) => "#" + value.itemTag.id)
+      .forEach((item) => {
+        const $inputTag = $(item);
+        const $spanEle = $(item).parent().children("span");
+
+        $spanEle.text("값이 입력되지 않았습니다!").css({ display: "block" });
+        $inputTag.on("input", function () {
+          $spanEle.css({ display: "none" });
+        });
+      });
+    return;
   }
 
   const [
@@ -65,15 +76,41 @@ $("#submit__button").on("click", function () {
     tell,
     nickName,
     email,
-  ] = formInfos;
+  ] = formInfos.map(({ itemValue }) => itemValue);
 
-  // if (isNullInputed.length) {
-  //   alert("입력되지 않은 값이 존재합니다.");
-  //   const a = $inputEle.toArray().map((item) => item.value);
-  //   // .filter((item, i) => ({ [i]: !(formInfos[i] && item) }));
+  localStorage.setItem(
+    "userAccount",
+    JSON.stringify({
+      id: "shere1765",
+      password: "1234",
+      gender: "남",
+      firstName: "승훈",
+      lastName: "이",
+      tell: "01026255147",
+      nickName: "Idooru",
+      email: "shere1765@gmail.com",
+    })
+  );
 
-  //   debugger;
+  const userAccount = JSON.parse(
+    localStorage.getItem("userAccount")
+      ? localStorage.getItem("userAccount")
+      : []
+  );
 
-  //   console.log(a);
-  // }
+  debugger;
+
+  localStorage.setItem(
+    "userAccount",
+    JSON.stringify({
+      id,
+      password,
+      gender,
+      firstName,
+      lastName,
+      tell,
+      nickName,
+      email,
+    })
+  );
 });
