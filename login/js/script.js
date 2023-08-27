@@ -34,11 +34,30 @@ $("#submit__login").on("click", function () {
   const password = $("#input__password").val();
 
   if (id && password) {
-    sessionStorage.setItem("id", id);
-    sessionStorage.setItem("password", password);
+    const userAccount = JSON.parse(
+      localStorage.getItem("userAccount")
+        ? localStorage.getItem("userAccount")
+        : "[]"
+    );
+    const idFound = userAccount.find((user) => user.id === id);
+    const pwFound = userAccount.find((user) => user.password === password);
 
-    location.href = "../../index.html";
-  } else {
-    alert("아이디와 비밀번호를 입력해주세요.");
+    if (idFound && pwFound) {
+      if (idFound.nickName === pwFound.nickName) {
+        const logindUser = JSON.parse(
+          sessionStorage.getItem("logindUser")
+            ? sessionStorage.getItem("loginedUser")
+            : "[]"
+        );
+
+        logindUser.push(idFound);
+
+        sessionStorage.setItem("logindUser", JSON.stringify(logindUser));
+
+        location.href = "../../index.html";
+        alert("로그인에 성공하였습니다!");
+      }
+    }
   }
+  alert("아이디와 비밀번호가 일치하지 않습니다.");
 });
