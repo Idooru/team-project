@@ -55,19 +55,6 @@
   font-size: 11px;
 }
 
-.customer__section form #user__gender {
-  display: block;
-  width: 450px;
-  margin-top: 11px;
-  padding: 10px 0;
-  margin-bottom: 40px;
-  border: none;
-  outline: none;
-  background-color: rgba(224, 224, 224, 0.76);
-  border-radius: 10px;
-  text-align: center;
-}
-
 .customer__section form #submit__button {
   display: block;
   width: 350px;

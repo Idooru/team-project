@@ -43,6 +43,7 @@ formEle.forEach((element) => {
 $("#user__id").focus();
 
 $("#submit__button").on("click", function () {
+  let flag = true;
   const $inputEle = $(".customer__content form input");
   const formInfos = $inputEle
     .toArray()
@@ -51,19 +52,17 @@ $("#submit__button").on("click", function () {
   const nullValue = formInfos.filter((info) => info.itemValue == false);
 
   if (nullValue.length) {
-    alert("입력되지 않은 필드가 있습니다!");
     nullValue
       .map((value) => "#" + value.itemTag.id)
       .forEach((item) => {
         const $inputTag = $(item);
         const $spanEle = $(item).parent().children("span");
 
-        $spanEle.text("값이 입력되지 않았습니다!").css({ display: "block" });
+        $spanEle.text("값 미입력").css({ display: "block" });
         $inputTag.on("input", function () {
           $spanEle.css({ display: "none" });
         });
       });
-    return;
   }
 
   const [
@@ -78,39 +77,68 @@ $("#submit__button").on("click", function () {
     email,
   ] = formInfos.map(({ itemValue }) => itemValue);
 
-  localStorage.setItem(
-    "userAccount",
-    JSON.stringify({
-      id: "shere1765",
-      password: "1234",
-      gender: "남",
-      firstName: "승훈",
-      lastName: "이",
-      tell: "01026255147",
-      nickName: "Idooru",
-      email: "shere1765@gmail.com",
-    })
-  );
-
   const userAccount = JSON.parse(
     localStorage.getItem("userAccount")
       ? localStorage.getItem("userAccount")
-      : []
+      : "[]"
   );
 
-  debugger;
+  if (userAccount.find((user) => user.id === id)) {
+    const $idSpanEle = $("#user__id").parent().children("span");
+    $idSpanEle.text("중복된 아이디").css({ display: "block" });
+    flag = false;
+  }
 
-  localStorage.setItem(
-    "userAccount",
-    JSON.stringify({
-      id,
-      password,
-      gender,
-      firstName,
-      lastName,
-      tell,
-      nickName,
-      email,
-    })
-  );
+  if (password !== passwordRe) {
+    const $passwordConfirmSpanEle = $("#user__password__confirm")
+      .parent()
+      .children("span");
+    $passwordConfirmSpanEle.text("비밀번호 불일치").css({ display: "block" });
+    flag = false;
+  }
+
+  if (gender !== "남" && gender !== "여") {
+    const $genderSpanEle = $("#user__gender").parent().children("span");
+    $genderSpanEle.text("입력 불일치").css({ display: "block" });
+    flag = false;
+  }
+
+  if (tell.includes("-")) {
+    const $tellSpanEle = $("#user__tell").parent().children("span");
+    $tellSpanEle.text("숫자로만 입력").css({ display: "block" });
+    flag = false;
+  }
+
+  if (userAccount.find((user) => user.nickName === nickName)) {
+    const $nickNameSpan = $("#user__nickname").parent().children("span");
+    $nickNameSpan.text("중복된 닉네임").css({ display: "block" });
+    flag = false;
+  }
+
+  if (!email.includes("@")) {
+    const $emailSpan = $("#user__email").parent().children("span");
+    $emailSpan.text("이메일 형식 불일치").css({ display: "block" });
+    flag = false;
+  }
+
+  if (!flag) return;
+
+  const tellHyphen = tell.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
+
+  userAccount.push({
+    id,
+    password,
+    gender,
+    firstName,
+    lastName,
+    tellHyphen,
+    nickName,
+    email,
+  });
+
+  localStorage.setItem("userAccount", JSON.stringify(userAccount));
+
+  location.href = "./index.html";
+
+  alert("회원가입을 완료하였습니다!");
 });
