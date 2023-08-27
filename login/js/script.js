@@ -44,13 +44,7 @@ $("#submit__login").on("click", function () {
 
     if (idFound && pwFound) {
       if (idFound.nickName === pwFound.nickName) {
-        const logindUser = JSON.parse(
-          sessionStorage.getItem("logindUser")
-            ? sessionStorage.getItem("loginedUser")
-            : "[]"
-        );
-
-        logindUser.push(idFound);
+        const logindUser = idFound;
 
         sessionStorage.setItem("logindUser", JSON.stringify(logindUser));
 
