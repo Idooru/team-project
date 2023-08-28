@@ -40,7 +40,7 @@ formEle.forEach((element) => {
   });
 });
 
-$("#user__id").focus();
+$("#user__email").focus();
 
 $("#submit__button").on("click", function () {
   let flag = true;
@@ -122,9 +122,11 @@ $("#submit__button").on("click", function () {
 
   if (!flag) return;
 
+  const id = userAccount.length ? (userAccount.length += 1) : 1;
   const tellHyphen = tell.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
 
   userAccount.push({
+    id,
     email,
     password,
     gender,
