@@ -56,7 +56,7 @@ $("#submit__button").on("click", function () {
       .map((value) => "#" + value.itemTag.id)
       .forEach((item) => {
         const $inputTag = $(item);
-        const $spanEle = $(item).parent().children("span");
+        const $spanEle = $(item).parent().children(".error");
 
         $spanEle.text("값 미입력").css({ display: "block" });
         $inputTag.on("input", function () {
@@ -83,13 +83,13 @@ $("#submit__button").on("click", function () {
   );
 
   if (userAccount.find((user) => user.email === email)) {
-    const $emailSpanEle = $("#user__email").parent().children("span");
+    const $emailSpanEle = $("#user__email").parent().children(".error");
     $emailSpanEle.text("중복된 아이디").css({ display: "block" });
     flag = false;
   }
 
   if (!email.includes("@")) {
-    const $emailSpanEle = $("#user__email").parent().children("span");
+    const $emailSpanEle = $("#user__email").parent().children(".error");
     $emailSpanEle.text("이메일 형식 불일치").css({ display: "block" });
     flag = false;
   }
@@ -97,25 +97,25 @@ $("#submit__button").on("click", function () {
   if (password !== passwordRe) {
     const $passwordConfirmSpanEle = $("#user__password__confirm")
       .parent()
-      .children("span");
+      .children(".error");
     $passwordConfirmSpanEle.text("비밀번호 불일치").css({ display: "block" });
     flag = false;
   }
 
   if (gender !== "남" && gender !== "여") {
-    const $genderSpanEle = $("#user__gender").parent().children("span");
+    const $genderSpanEle = $("#user__gender").parent().children(".error");
     $genderSpanEle.text("입력 불일치").css({ display: "block" });
     flag = false;
   }
 
   if (tell.includes("-")) {
-    const $tellSpanEle = $("#user__tell").parent().children("span");
+    const $tellSpanEle = $("#user__tell").parent().children(".error");
     $tellSpanEle.text("숫자로만 입력").css({ display: "block" });
     flag = false;
   }
 
   if (userAccount.find((user) => user.nickName === nickName)) {
-    const $nickNameSpanEle = $("#user__nickname").parent().children("span");
+    const $nickNameSpanEle = $("#user__nickname").parent().children(".error");
     $nickNameSpanEle.text("중복된 닉네임").css({ display: "block" });
     flag = false;
   }

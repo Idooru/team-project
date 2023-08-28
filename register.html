@@ -15,7 +15,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <span></span>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
       integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
@@ -32,95 +31,7 @@
       <div class="customer__content">
         <form action="#">
           <div class="text__form">
-            <label for="user__id">ID </label>
-            <input
-              id="user__id"
-              type="text"
-              placeholder="아이디를 입력해주세요"
-              maxlength="15"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__password">PW </label>
-            <input
-              id="user__password"
-              type="password"
-              placeholder="비밀번호를 입력해주세요"
-              maxlength="25"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__password__confirm">PW Confirm </label>
-            <input
-              id="user__password__confirm"
-              type="password"
-              placeholder="비밀번호를 다시 입력해주세요"
-              maxlength="25"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__gender">Gender </label>
-            <input
-              id="user__gender"
-              type="text"
-              placeholder="성별(남, 여)을 입력해주세요"
-              maxlength="1"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__first__name">First Name </label>
-            <input
-              id="user__first__name"
-              type="text"
-              placeholder="이름을 입력해주세요"
-              maxlength="10"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__last__name">Last Name </label>
-            <input
-              id="user__last__name"
-              type="text"
-              placeholder="성을 입력해주세요"
-              maxlength="10"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__tell">Tell </label>
-            <input
-              id="user__tell"
-              type="text"
-              placeholder="전화번호를 숫자로 입력해주세요"
-              maxlength="11"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__nickname">Nickname </label>
-            <input
-              id="user__nickname"
-              type="text"
-              placeholder="닉네임을 입력해주세요"
-              maxlength="13"
-              autocomplete="off"
-            />
-            <span></span>
-          </div>
-          <div class="text__form">
-            <label for="user__email">E-mail </label>
+            <label for="user__email">이메일</label>
             <input
               id="user__email"
               type="email"
@@ -128,7 +39,84 @@
               maxlength="35"
               autocomplete="off"
             />
-            <span></span>
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__password">비밀번호</label>
+            <input
+              id="user__password"
+              type="password"
+              placeholder="비밀번호를 입력해주세요"
+              maxlength="25"
+              autocomplete="off"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__password__confirm">비밀번호 확인</label>
+            <input
+              id="user__password__confirm"
+              type="password"
+              placeholder="비밀번호를 다시 입력해주세요"
+              maxlength="25"
+              autocomplete="off"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__gender">성별</label>
+            <input
+              id="user__gender"
+              type="text"
+              placeholder="성별(남, 여)을 입력해주세요"
+              maxlength="1"
+              autocomplete="off"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__first__name">이름</label>
+            <input
+              id="user__first__name"
+              type="text"
+              placeholder="이름을 입력해주세요"
+              maxlength="10"
+              autocomplete="off"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__last__name">성</label>
+            <input
+              id="user__last__name"
+              type="text"
+              placeholder="성을 입력해주세요"
+              maxlength="10"
+              autocomplete="off"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__tell">전화번호</label>
+            <input
+              id="user__tell"
+              type="text"
+              placeholder="전화번호를 숫자로 입력해주세요"
+              maxlength="11"
+              autocomplete="off"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="text__form">
+            <label for="user__nickname">닉네임</label>
+            <input
+              id="user__nickname"
+              type="text"
+              placeholder="닉네임을 입력해주세요"
+              maxlength="13"
+              autocomplete="off"
+            />
+            <span class="error"></span>
           </div>
           <button id="submit__button" type="button">회원가입 완료</button>
         </form>
