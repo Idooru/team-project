@@ -30,16 +30,16 @@ $("#register__btn").on("click", function () {
 });
 
 $("#submit__login").on("click", function () {
-  const id = $("#input__email").val();
+  const email = $("#input__email").val();
   const password = $("#input__password").val();
 
-  if (id && password) {
+  if (email && password) {
     const userAccount = JSON.parse(
       localStorage.getItem("userAccount")
         ? localStorage.getItem("userAccount")
         : "[]"
     );
-    const idFound = userAccount.find((user) => user.id === id);
+    const idFound = userAccount.find((user) => user.email === email);
     const pwFound = userAccount.find((user) => user.password === password);
 
     if (idFound && pwFound) {
@@ -53,5 +53,5 @@ $("#submit__login").on("click", function () {
       }
     }
   }
-  alert("아이디와 비밀번호가 일치하지 않습니다.");
+  alert("이메일과 비밀번호가 일치하지 않습니다.");
 });

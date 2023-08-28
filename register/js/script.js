@@ -66,7 +66,7 @@ $("#submit__button").on("click", function () {
   }
 
   const [
-    id,
+    email,
     password,
     passwordRe,
     gender,
@@ -74,7 +74,6 @@ $("#submit__button").on("click", function () {
     lastName,
     tell,
     nickName,
-    email,
   ] = formInfos.map(({ itemValue }) => itemValue);
 
   const userAccount = JSON.parse(
@@ -83,9 +82,15 @@ $("#submit__button").on("click", function () {
       : "[]"
   );
 
-  if (userAccount.find((user) => user.id === id)) {
-    const $idSpanEle = $("#user__id").parent().children("span");
-    $idSpanEle.text("중복된 아이디").css({ display: "block" });
+  if (userAccount.find((user) => user.email === email)) {
+    const $emailSpanEle = $("#user__email").parent().children("span");
+    $emailSpanEle.text("중복된 아이디").css({ display: "block" });
+    flag = false;
+  }
+
+  if (!email.includes("@")) {
+    const $emailSpanEle = $("#user__email").parent().children("span");
+    $emailSpanEle.text("이메일 형식 불일치").css({ display: "block" });
     flag = false;
   }
 
@@ -110,14 +115,8 @@ $("#submit__button").on("click", function () {
   }
 
   if (userAccount.find((user) => user.nickName === nickName)) {
-    const $nickNameSpan = $("#user__nickname").parent().children("span");
-    $nickNameSpan.text("중복된 닉네임").css({ display: "block" });
-    flag = false;
-  }
-
-  if (!email.includes("@")) {
-    const $emailSpan = $("#user__email").parent().children("span");
-    $emailSpan.text("이메일 형식 불일치").css({ display: "block" });
+    const $nickNameSpanEle = $("#user__nickname").parent().children("span");
+    $nickNameSpanEle.text("중복된 닉네임").css({ display: "block" });
     flag = false;
   }
 
@@ -126,14 +125,13 @@ $("#submit__button").on("click", function () {
   const tellHyphen = tell.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
 
   userAccount.push({
-    id,
+    email,
     password,
     gender,
     firstName,
     lastName,
     tellHyphen,
     nickName,
-    email,
   });
 
   localStorage.setItem("userAccount", JSON.stringify(userAccount));
