@@ -138,7 +138,7 @@ $("#submit__button").on("click", function () {
 
   localStorage.setItem("userAccount", JSON.stringify(userAccount));
 
-  location.href = "./index.html";
+  location.href = "./login.html";
 
   alert("회원가입을 완료하였습니다!");
 });
