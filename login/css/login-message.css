@@ -20,9 +20,9 @@
 }
 
 .customer__textbox .customer__text form .input__window .log {
-  display: flex;
-  justify-content: space-between;
   width: 400px;
+  justify-content: space-between;
+  display: flex;
 }
 
 .customer__textbox .customer__text form .input__window input {

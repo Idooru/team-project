@@ -48,7 +48,7 @@ $("#submit__login").on("click", function () {
 
         sessionStorage.setItem("logindUser", JSON.stringify(logindUser));
 
-        location.href = "../../index.html";
+        location.href = "../index.html";
         return alert("로그인에 성공하였습니다!");
       }
     }

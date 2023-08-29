@@ -1,4 +1,4 @@
-$("header").load("./header/header.html", function () {
+$("header").load("../header/header.html", function () {
   $("#search").on("click", function () {
     $("#my-form").toggleClass("invisible");
   });
@@ -8,7 +8,7 @@ $("header").load("./header/header.html", function () {
     const $logoutEle = $("#logout");
 
     $myPageEle.children("i").attr({ class: "fa-solid fa-user" });
-    $myPageEle.parent("a").attr({ href: "../profile.html" });
+    $myPageEle.parent("a").attr({ href: "../../profile/profile.html" });
 
     $logoutEle.attr({ style: "display: block; margin-left: 20px" });
     $logoutEle.on("click", function () {
@@ -28,4 +28,4 @@ $("header").load("./header/header.html", function () {
   }
 });
 
-$("footer").load("./footer/footer.html");
+$("footer").load("../footer/footer.html");
