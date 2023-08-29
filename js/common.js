@@ -12,9 +12,13 @@ $("header").load("../header/header.html", function () {
 
     $logoutEle.attr({ style: "display: block; margin-left: 20px" });
     $logoutEle.on("click", function () {
-      sessionStorage.clear();
-      alert("로그아웃 되었습니다.");
-      location.href = "../index.html";
+      const result = confirm("로그 아웃 하시겠습니까?");
+
+      if (result) {
+        sessionStorage.clear();
+        alert("로그아웃 되었습니다.");
+        location.href = "../index.html";
+      }
     });
   }
 
