@@ -97,19 +97,26 @@ a {
   padding-left: 20px;
   border: 1px solid #fff;
 }
-#mainfooter {height: 500px;}
+#mainfooter {
+  height: 500px;
+}
 
-
-#mainfooter .subfooter .depth2{margin :150px auto 90px;}
+#mainfooter .subfooter .depth2 {
+  margin: 150px auto 90px;
+}
 #mainfooter .subfooter .depth2 a {
   text-decoration: underline;
-  color: #333333; 
+  color: #333333;
 }
 #mainfooter .subfooter .depth2 li {
-  color: #767676; text-align: left;  line-height: 1.6rem;
+  color: #767676;
+  text-align: left;
+  line-height: 1.6rem;
   font-size: 14px;
 }
-#mainfooter .subfooter .depth2 li:first-child{width: 280px;}
+#mainfooter .subfooter .depth2 li:first-child {
+  width: 280px;
+}
 #mainfooter .subfooter .depth2 span {
   color: #000;
   font-size: 14px;
@@ -158,8 +165,10 @@ a {
   height: 40px;
   outline: none;
 }
-#mainfooter .subfoot div { text-align: left; line-height: 1.6rem;
-  font-size: 12px; 
+#mainfooter .subfoot div {
+  text-align: left;
+  line-height: 1.6rem;
+  font-size: 12px;
 }
 #sbox:hover {
   border: none;

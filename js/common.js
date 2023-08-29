@@ -1,4 +1,4 @@
-$(".header").load("./header/header.html", function () {
+$("header").load("./header/header.html", function () {
   $("#search").on("click", function () {
     $("#my-form").toggleClass("invisible");
   });
@@ -28,4 +28,4 @@ $(".header").load("./header/header.html", function () {
   }
 });
 
-$(".footer").load("./footer/footer.html");
+$("footer").load("./footer/footer.html");
