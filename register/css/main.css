@@ -11,10 +11,9 @@
 
 .customer__section h1 {
   text-align: center;
-  font-size: 30px;
-  margin-top: -10px;
-  font-weight: 500;
-  padding-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 40px;
+  padding: 10px;
 }
 
 .customer__section form .text__form {
