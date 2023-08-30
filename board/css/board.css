@@ -27,7 +27,7 @@
 .board__section .board__content .subject__label {
   width: 100%;
   height: 300px;
-  background-color: rgba(199, 199, 199, 0.253);
+  background-color: rgba(240, 240, 240, 0.651);
   margin: 20px 0;
 }
 
@@ -80,15 +80,15 @@
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(5) {
-  width: 70px;
+  width: 78px;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(5) {
-  width: 70px;
+  width: 78px;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(6) {
-  width: 20px;
+  width: 12px;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(6) {
@@ -99,7 +99,7 @@
   padding: 10px 0;
   position: sticky;
   top: 0;
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(204, 204, 204);
 }
 
 .board__section .board__content .subject__label table td {
@@ -110,6 +110,15 @@
   display: block;
   overflow: auto;
   height: 260px;
+}
+
+tbody::-webkit-scrollbar {
+  width: 12px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: rgb(146, 146, 146);
 }
 
 .board__section .board__content .subject__label tbody > tr:hover {
