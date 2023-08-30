@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.board__section {
+  text-align: center;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 60px;
+}
+
+.board__section h1 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.board__section .board__content .object__label {
+  text-align: left;
+  padding: 8px 0;
+  border-bottom: 4px solid black;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.board__section .board__content .subject__label {
+  width: 880px;
+  height: 300px;
+  background-color: rgba(199, 199, 199, 0.253);
+  margin: 20px 0;
+  overflow-y: scroll;
+}
+
+.subject__label::-webkit-scrollbar-thumb {
+  height: 20px;
+}
+
+.board__section .board__content .subject__label table {
+  width: 860px;
+  margin: 0;
+  border: 0px;
+  border-collapse: collapse;
+}
+
+.board__section .board__content .subject__label table col:nth-child(1) {
+  width: 4%;
+}
+
+.board__section .board__content .subject__label table col:nth-child(2) {
+  width: 20%;
+}
+
+.board__section .board__content .subject__label table col:nth-child(3) {
+  width: 5%;
+}
+
+.board__section .board__content .subject__label table col:nth-child(4) {
+  width: 10%;
+}
+
+.board__section .board__content .subject__label table col:nth-child(5) {
+  width: 4%;
+}
+
+.board__section .board__content .subject__label table th {
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: rgb(199, 199, 199);
+}
+
+.board__section .board__content .subject__label table td {
+  padding: 7px 0;
+}
+
+.board__section .board__content .subject__label tbody > tr:hover {
+  color: rgb(124, 206, 178);
+  cursor: pointer;
+}
