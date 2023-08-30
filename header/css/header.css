@@ -113,7 +113,7 @@ header {
 }
 
 .header .nav .depth1 > li {
-  padding: 26px 20px 26px;
+  padding: 20px;
   position: relative;
   text-align: center;
 }
@@ -131,7 +131,7 @@ header {
 
 .header .nav .depth1 li .depth2 {
   position: absolute;
-  top: 84%;
+  top: 90%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 13px;
@@ -156,4 +156,10 @@ header {
 
 .header .nav .depth1 li .depth2 li:nth-child(1) {
   border: none;
+}
+
+.header .nav__rwd {
+  width: 200px;
+  height: 100px;
+  background-color: red;
 }

@@ -3,6 +3,10 @@ $("header").load("../header/header.html", function () {
     $("#my-form").toggleClass("invisible");
   });
 
+  $("#list").on("click", function () {
+    $(".nav__rwd").toggleClass("invisible");
+  });
+
   if (JSON.parse(sessionStorage.getItem("logindUser"))) {
     const $myPageEle = $("#my-page");
     const $logoutEle = $("#logout");
