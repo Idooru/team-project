@@ -10,7 +10,7 @@ $("header").load("../header/header.html", function () {
     $myPageEle.children("i").attr({ class: "fa-solid fa-user" });
     $myPageEle.parent("a").attr({ href: "../../profile/profile.html" });
 
-    $logoutEle.attr({ style: "display: block; margin-left: 20px" });
+    $logoutEle.attr({ style: "display: inline-block;" });
     $logoutEle.on("click", function () {
       const result = confirm("로그 아웃 하시겠습니까?");
 
