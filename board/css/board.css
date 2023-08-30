@@ -32,7 +32,7 @@
 }
 
 .board__section .board__content .subject__label table {
-  display: block;
+  height: 50%;
   width: 100%;
   margin: 0;
   border: 0px;
@@ -40,59 +40,64 @@
 }
 
 .board__section .board__content .subject__label table thead {
-  display: block;
+  width: 90%;
+}
+
+.board__section .board__content .subject__label table tr {
+  white-space: nowrap;
 }
 
 .board__section .board__content .subject__label table thead th {
-  display: inline-block;
+  width: 880px;
+  /* display: inline-block; */
   height: 40px;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(1) {
-  width: 70px;
+  width: 7.9%;
 }
 .board__section .board__content .subject__label table tbody td:nth-child(1) {
-  width: 70px;
+  width: 7.9%;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(2) {
-  width: 430px;
+  width: 48%;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(2) {
-  width: 430px;
+  width: 48%;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(3) {
-  width: 140px;
+  width: 16%;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(3) {
-  width: 140px;
+  width: 16%;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(4) {
-  width: 150px;
+  width: 17%;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(4) {
-  width: 150px;
+  width: 17%;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(5) {
-  width: 78px;
+  width: 8%;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(5) {
-  width: 78px;
+  width: 8%;
 }
 
 .board__section .board__content .subject__label table thead th:nth-child(6) {
-  width: 12px;
+  width: 13%;
 }
 
 .board__section .board__content .subject__label table tbody td:nth-child(6) {
-  width: auto;
+  width: 13%;
 }
 
 .board__section .board__content .subject__label table th {
@@ -107,9 +112,9 @@
 }
 
 .board__section .board__content .subject__label table tbody {
-  display: block;
+  /* display: block; */
   overflow: auto;
-  height: 260px;
+  height: 50%;
 }
 
 tbody::-webkit-scrollbar {
