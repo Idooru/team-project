@@ -36,7 +36,7 @@
   header {
     top: 0;
     border-top: 8px solid rgb(0, 0, 0);
-    height: 90px;
+    height: 88px;
     position: sticky;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(231, 231, 231);
@@ -174,5 +174,11 @@
 
   .header .nav .depth1 li .depth2 li:nth-child(1) {
     border: none;
+  }
+
+  .header .nav__rwd {
+    width: 200px;
+    height: 100px;
+    background-color: red;
   }
 }
